@@ -33,7 +33,7 @@ How To Run:
    
        kubectl apply -f eks-admin-service-account.yaml
        
-   Run
+   Start Kubectl Proxy
    
        kubectl proxy
        
@@ -41,7 +41,7 @@ How To Run:
    
        kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')
     
-   Use Token to Login
+   Open below Url and Use Token generated in the above command to Login
    
        http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
        
