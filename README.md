@@ -8,7 +8,7 @@ How To Run:
 -----------
   Clone this repo and run terraform module.
   
-    git clone
+    git clone https://github.com/kiranpe/Terraform_AWS_EKS.git
     
     terrform init
     
