@@ -15,7 +15,9 @@ How To Run:
     terraform apply -auto-approve
     
     To Get kubeconfig:
-    aws eks --region us-east-2 update-kubeconfig --name eks-cluster --profile=devops
+    aws eks --region us-east-2 update-kubeconfig --name eks-cluster --> Downloads kubeconfig 
+    
+    Use [--profile=devops] if you set up the aws credentials using profiles.
     
     To Destroy Resources:
     terraform destroy -auto-approve
