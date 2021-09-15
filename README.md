@@ -17,7 +17,7 @@ How To Run:
     To Get kubeconfig:
     aws eks --region us-east-2 update-kubeconfig --name eks-cluster --> Downloads kubeconfig 
     
-    Use [--profile=<your profile in .aws/credentials>] if you set up the aws credentials using profiles.
+    Use [--profile=<your profile in ~/.aws/credentials>] if you set up the aws credentials using profiles.
     
     To Destroy Resources:
     terraform destroy -auto-approve
