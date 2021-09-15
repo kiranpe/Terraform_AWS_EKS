@@ -21,3 +21,24 @@ How To Run:
     
     To Destroy Resources:
     terraform destroy -auto-approve
+ 
+ How To setup GUI:
+ ----------------
+ 
+   Install yaml from Loacal
+   
+       kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.5/aio/deploy/recommended.yaml
+
+   Install Servie Account using eks-admin-service-account.yaml. File is in Git Repo
+   
+       kubectl apply -f eks-admin-service-account.yaml
+       
+   Run
+       kubectl proxy
+       
+   To Get Token
+       kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')
+    
+   Use Token to Login
+       http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#!/login
+       
